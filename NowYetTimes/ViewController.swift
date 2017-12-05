@@ -10,9 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let kHomeLandingSegue = "homeLanding"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        perform(#selector(pushToMainLanding), with: nil, afterDelay: 2)
+    }
+    
+    @objc func pushToMainLanding(){
+        performSegue(withIdentifier: kHomeLandingSegue, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("");
+        let transition = CATransition()
+        transition.duration = 0.5
+        transition.type = kCATransitionFade
+        self.navigationController?.view.layer.add(transition, forKey:nil)
     }
 
     override func didReceiveMemoryWarning() {
