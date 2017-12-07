@@ -445,27 +445,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jY2-xV-Eb1">
-                                                    <rect key="frame" x="295" y="50.5" width="60" height="22"/>
+                                                    <rect key="frame" x="325" y="50.5" width="30" height="22"/>
                                                     <state key="normal">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="Buy">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="13" name=".SFNSText"/>
-                                                                    <font key="NSOriginalFont" size="13" name=".SFNSText"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content=" ">
-                                                                <attributes>
-                                                                    <font key="NSFont" metaFont="system" size="15"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content="8.99">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="17" name="SFMono-Bold"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                        <attributedString key="attributedTitle"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="saveBook:" destination="kVw-fr-gKa" eventType="touchUpInside" id="f8S-lS-f0k"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i48-Ob-itw">
                                                     <rect key="frame" x="6" y="71" width="369" height="21"/>

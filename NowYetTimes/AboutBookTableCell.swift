@@ -8,6 +8,9 @@
 
 import Foundation
 
+protocol SaveBookDelegate : class {
+    func saveBook(book : AboutBook)
+}
 
 class AboutBookTableCell: UITableViewCell {
     static let CELL_ID = "AboutBookTableCell"
@@ -17,6 +20,9 @@ class AboutBookTableCell: UITableViewCell {
     @IBOutlet weak var priceButton : UIButton!
     
     @IBOutlet weak var debugL: UILabel!
+    
+    weak var saveDelegate : SaveBookDelegate?
+    
     var aboutBook : AboutBook!{
         didSet{
             if let ab = aboutBook{
@@ -31,16 +37,29 @@ class AboutBookTableCell: UITableViewCell {
                 }else{
                     rankLabel.text = "N/A"
                 }
-                if let price = ab.book_details?.first?.price{
-                    priceButton.setTitle("\(price)", for: .normal)
+//                if let price = ab.book_details?.first?.price{
+//                    priceButton.setTitle("\(price)", for: .normal)
+//                }else{
+//                    priceButton.setTitle("N/A", for: .normal)
+//                }
+                if let isbn = aboutBook.isbns?.first?.isbn13{
+                    priceButton.setTitle( AppUtils.isBookSaved(isbn_13: isbn) ? "SAVED" : "SAVE", for: .normal)
                 }else{
-                    priceButton.setTitle("N/A", for: .normal)
+                     priceButton.setTitle("SAVE", for: .normal)
                 }
+                
+
                 debugL.text = ab.list_name
                 debugL.alpha = 0.0
                 
             }
         }
+    }
+    @IBAction func saveBook(_ sender: UIButton) {
+        if aboutBook.isbns?.first?.isbn13 != nil{
+            saveDelegate?.saveBook(book: aboutBook)
+        }
+        priceButton.setTitle("SAVED", for: .normal)
     }
     
 }

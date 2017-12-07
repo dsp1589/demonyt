@@ -17,6 +17,6 @@ let kAllowedTimePeriod = ["1","7","30"]
 let kAllowedSectionInMostPopular =
 ["Arts","Automobiles","Blogs","Books","Business Day","Education","Fashion & Style","Food","Health","Job Market","Magazine","membercenter","Movies","Multimedia","N.Y.%20%2F%20Region","NYT Now","Obituaries","Open","Opinion","Public Editor","Real Estate","Science","Sports","Style","Sunday Review","T Magazine","Technology","The Upshot","Theater","Times Insider","Today’s Paper","Travel","U.S.","World","Your Money","all-sections"]
 
-let kHomeMenu = ["Top Stories","Most Popular","Books","Article","NYT Archives","Movies"]
+let kHomeMenu = ["Top Stories","Most Popular","Books","Article","NYT Archives","Movies","Saved Items"]
 
 

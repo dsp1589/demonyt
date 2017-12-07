@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DE78F56075E0099F8256F58 /* Pods_NowYetTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A73A3FA3B2788882F419E571 /* Pods_NowYetTimes.framework */; };
+		650DEEFD1FD8B76400319C6B /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650DEEFC1FD8B76400319C6B /* AppUtils.swift */; };
 		650F03791FD1E628000DD892 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650F03781FD1E628000DD892 /* AppDelegate.swift */; };
 		650F037B1FD1E628000DD892 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650F037A1FD1E628000DD892 /* ViewController.swift */; };
 		650F037E1FD1E628000DD892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650F037C1FD1E628000DD892 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650DEEFC1FD8B76400319C6B /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		650F03751FD1E628000DD892 /* NowYetTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NowYetTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650F03781FD1E628000DD892 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		650F037A1FD1E628000DD892 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				65A09DB61FD4D4E300A3C22C /* BooksTableViewController.swift */,
 				65410D101FD5AD3F004F5C9B /* BookTitlesViewController.swift */,
 				65900C921FD5D9D400806A8F /* AboutBookTableCell.swift */,
+				650DEEFC1FD8B76400319C6B /* AppUtils.swift */,
 			);
 			path = NowYetTimes;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				650F03A91FD34D74000DD892 /* TopStoriesService.swift in Sources */,
 				65900C931FD5D9D400806A8F /* AboutBookTableCell.swift in Sources */,
 				65900C8E1FD5CD2400806A8F /* BooksOfTypeResponse.swift in Sources */,
+				650DEEFD1FD8B76400319C6B /* AppUtils.swift in Sources */,
 				650F03C71FD447C3000DD892 /* MediaMetadata.swift in Sources */,
 				650F038D1FD1EFA6000DD892 /* MenuListViewController.swift in Sources */,
 				65A09DB71FD4D4E300A3C22C /* BooksTableViewController.swift in Sources */,

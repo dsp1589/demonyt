@@ -80,6 +80,18 @@ class BooksViewController : UIViewController{
     }
 }
 
+extension BooksViewController : SaveBookDelegate{
+    func saveBook(book: AboutBook) {
+        var toBeSavedDate = Dictionary<String,String>()
+        toBeSavedDate["amazon_url"] = book.amazon_product_url
+        toBeSavedDate["isbns_13"] = book.isbns?.first?.isbn13
+        toBeSavedDate["title"] = book.book_details?.first?.title
+        toBeSavedDate["desc"] = book.book_details?.first?.description
+        toBeSavedDate["author"] = book.book_details?.first?.author
+        AppUtils.addBook(item: toBeSavedDate)
+    }
+}
+
 extension BooksViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let c = titles?.first(where: { (b) -> Bool in
@@ -90,12 +102,18 @@ extension BooksViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: AboutBookTableCell.CELL_ID) as! AboutBookTableCell
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let c = cell as? AboutBookTableCell
         if let aboutBooks = titles?.first(where: { (b) -> Bool in
             return b.list_name_encoded == currentType
         })?.reponse?.results{
-            cell.aboutBook = aboutBooks[indexPath.row]
+            c?.aboutBook = aboutBooks[indexPath.row]
         }
-        return cell
+        c?.saveDelegate = self
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

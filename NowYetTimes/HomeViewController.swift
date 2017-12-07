@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     let kBookSeque = "books"
     let kPadding32 : CGFloat = 32.0
     var selectedMenu : Int = 0
+    var savedItemAvailable  = false
+    
     @IBOutlet weak var collectionView: UICollectionView!
     let collFlowLayout = UICollectionViewLayout()
     override func viewDidLoad() {
@@ -27,6 +29,16 @@ class HomeViewController: UIViewController {
         blurEffectView.frame = self.view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.insertSubview(blurEffectView, at: 0)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let savedBookscount = AppUtils.savedBooks()?.count, savedBookscount > 0{
+            savedItemAvailable = true
+            collectionView.reloadData()
+        }else{
+            savedItemAvailable = false
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -121,7 +133,7 @@ extension HomeViewController : UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return kHomeMenu.count
+        return kHomeMenu.count - (savedItemAvailable ? 0 : 1)
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionCell.Cell_Id, for: indexPath)
