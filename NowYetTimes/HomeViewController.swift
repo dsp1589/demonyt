@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     
     let kMainLandingSeque = "mainLanding"
     let kBookSeque = "books"
+    let kSavedbooks = "SavedBooksViewController"
     let kPadding32 : CGFloat = 32.0
     var selectedMenu : Int = 0
     var savedItemAvailable  = false
@@ -63,6 +64,9 @@ class HomeViewController: UIViewController {
             break
         case 2:
             performSegue(withIdentifier: kBookSeque, sender: sender)
+            break
+        case 6:
+            performSegue(withIdentifier: kSavedbooks, sender: nil)
             break
         default:
             break

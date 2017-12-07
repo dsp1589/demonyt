@@ -309,6 +309,83 @@
             </objects>
             <point key="canvasLocation" x="1720.8" y="-86.806596701649184"/>
         </scene>
+        <!--Saved Books View Controller-->
+        <scene sceneID="bwZ-Hx-AI7">
+            <objects>
+                <tableViewController storyboardIdentifier="SavedBooksViewController" automaticallyAdjustsScrollViewInsets="NO" id="mJL-ST-enE" customClass="SavedBooksViewController" customModule="NowYetTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="L4r-J7-6cj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SavedBooksCell" rowHeight="163" id="AMW-Eb-0qN" customClass="SavedBooksCell" customModule="NowYetTimes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="163"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AMW-Eb-0qN" id="OR7-Ad-HyI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="162.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0A3-hn-1sa">
+                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-nS-xep">
+                                            <rect key="frame" x="16" y="40" width="343" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.27450980390000002" green="0.35294117650000001" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U92-Gz-XwK">
+                                            <rect key="frame" x="16" y="66" width="343" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7y-vE-wAm">
+                                            <rect key="frame" x="249" y="97" width="110" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <state key="normal" title="BUY in Amazon"/>
+                                            <connections>
+                                                <action selector="buy:" destination="AMW-Eb-0qN" eventType="touchUpInside" id="W6e-e3-d6e"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="U92-Gz-XwK" firstAttribute="trailing" secondItem="AMR-nS-xep" secondAttribute="trailing" id="0Vq-6T-bF7"/>
+                                        <constraint firstItem="0A3-hn-1sa" firstAttribute="leading" secondItem="OR7-Ad-HyI" secondAttribute="leadingMargin" id="6Hg-KD-Iqd"/>
+                                        <constraint firstItem="U92-Gz-XwK" firstAttribute="top" secondItem="AMR-nS-xep" secondAttribute="bottom" constant="8" symbolic="YES" id="8hz-r2-o5W"/>
+                                        <constraint firstItem="T7y-vE-wAm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OR7-Ad-HyI" secondAttribute="leadingMargin" id="APx-Ta-QB2"/>
+                                        <constraint firstItem="0A3-hn-1sa" firstAttribute="top" secondItem="OR7-Ad-HyI" secondAttribute="topMargin" id="Bbb-5D-BYA"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="AMR-nS-xep" secondAttribute="trailing" id="IZe-Li-XBm"/>
+                                        <constraint firstItem="U92-Gz-XwK" firstAttribute="leading" secondItem="AMR-nS-xep" secondAttribute="leading" id="Jmq-jR-pKh"/>
+                                        <constraint firstItem="T7y-vE-wAm" firstAttribute="top" secondItem="U92-Gz-XwK" secondAttribute="bottom" constant="8" symbolic="YES" id="bCd-bE-WmH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0A3-hn-1sa" secondAttribute="trailing" id="bsN-z9-HR4"/>
+                                        <constraint firstItem="AMR-nS-xep" firstAttribute="leading" secondItem="OR7-Ad-HyI" secondAttribute="leadingMargin" id="iIa-qx-0S1"/>
+                                        <constraint firstItem="T7y-vE-wAm" firstAttribute="trailing" secondItem="OR7-Ad-HyI" secondAttribute="trailingMargin" id="mlU-EN-Iye"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="T7y-vE-wAm" secondAttribute="bottom" constant="20" symbolic="YES" id="uUy-0A-4QH"/>
+                                        <constraint firstItem="AMR-nS-xep" firstAttribute="top" secondItem="0A3-hn-1sa" secondAttribute="bottom" constant="8" symbolic="YES" id="zfe-Su-Iah"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="U92-Gz-XwK" id="SGk-zC-623"/>
+                                    <outlet property="buy" destination="T7y-vE-wAm" id="FFw-9K-jfX"/>
+                                    <outlet property="descLabel" destination="AMR-nS-xep" id="HT2-lx-cRL"/>
+                                    <outlet property="titleLabel" destination="0A3-hn-1sa" id="haK-LM-WOx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mJL-ST-enE" id="DGB-0B-sg2"/>
+                            <outlet property="delegate" destination="mJL-ST-enE" id="E53-yH-AgI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvK-Cv-0pc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3085" y="-160"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="JPY-Gk-DWF">
             <objects>
@@ -382,6 +459,7 @@
                         <outlet property="collectionView" destination="gNh-2z-mTg" id="0C6-sY-a7e"/>
                         <segue destination="cJh-bp-0j5" kind="show" identifier="mainLanding" id="mp6-TM-N6d"/>
                         <segue destination="Qtk-22-ebP" kind="show" identifier="books" id="qig-Rq-h7R"/>
+                        <segue destination="mJL-ST-enE" kind="show" identifier="SavedBooksViewController" id="D6R-Ml-JN9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MAV-vk-U4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
